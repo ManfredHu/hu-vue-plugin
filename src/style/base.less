@@ -1,0 +1,21 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+// fix chrome input focused highlight
+// https://stackoverflow.com/questions/2943548/how-to-reset-remove-chromes-input-highlighting-focus-border
+input[type="text"],
+input[type="password"],
+input[type="url"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+select,
+textarea {
+  outline: none;
+}
+
+@rem: 2px;
