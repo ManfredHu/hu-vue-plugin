@@ -1,17 +1,25 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld/>
+    <Demo/>
+    <!-- <HelloWorld /> -->
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+import Demo from './components/Demo'
+// import HelloWorld from './components/HelloWorld'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Demo
+    // ,
+    // HelloWorld
+  },
+  created () {
+    // const link = location.href
+    // const jumpLink = link.indexOf('?') > -1 ? '' : (link + '?eruda=true&vconsole=true')
+    // if (jumpLink) location.href = jumpLink
   }
 }
 </script>

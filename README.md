@@ -39,6 +39,25 @@ this.$axios.get('/static/mock/axiosTestData.json').then(({data}) => {
 })
 ```
 
+## this.$cache
+Using localforage, click [here](https://github.com/localForage/localForage).
+这里其实localforage是支持localStorage/indexeddb/websql的，这里用到了localStorage.
+Demo
+```js
+const self = this
+this.$cache.setItem('time', 123).then(() => {
+  self.$cache.getItem('time').then((data) => {
+    // data: 123
+  })
+})
+```
+
+可以考虑传入option修改引擎。
+
+But the default use of Web SQL in PC, if you need localStorage, [modify the driver](https://localforage.github.io/localForage/#settings-api-config).
+
+
+
 # 移动端测试
 ## mobile debug
 动态引用，不用到调试脚本的用户不拉取调试脚本。
@@ -92,30 +111,3 @@ if (loader === 'less') {
 ```
 
 这里用到了[`style-resources-loader`](https://github.com/yenshih/style-resources-loader)这个模块。可以不需要在每个component组件都引用一遍`src/style/base.less`的文件。
-
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

@@ -6,7 +6,14 @@ import huVuePlugin from './index'
 
 Vue.config.productionTip = false
 // use hu-vue-plugin
-Vue.use(huVuePlugin)
+Vue.use(huVuePlugin, {
+  $cache: {
+    type: 'IndexedDB' // IndexedDB or WebSQL, localstorage
+  },
+  eruda: true,
+  vconsole: true,
+  vtap: true
+})
 
 /* eslint-disable no-new */
 new Vue({

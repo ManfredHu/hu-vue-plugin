@@ -4,7 +4,7 @@ process.env.NODE_ENV = 'testing'
 const webpack = require('webpack')
 const DevServer = require('webpack-dev-server')
 
-const webpackConfig = require('../../build/webpack.prod.conf')
+const webpackConfig = require('../../build/webpack.test.conf')
 const devConfigPromise = require('../../build/webpack.dev.conf')
 
 let server
@@ -16,8 +16,7 @@ devConfigPromise.then(devConfig => {
   const port = devServerOptions.port
   const host = devServerOptions.host
   return server.listen(port, host)
-})
-.then(() => {
+}).then(() => {
   // 2. run the nightwatch test suite against it
   // to run in additional browsers:
   //    1. add an entry in test/e2e/nightwatch.conf.js under "test_settings"
