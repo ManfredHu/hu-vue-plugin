@@ -1,5 +1,9 @@
 <h1><a href='https://github.com/ManfredHu/hu-vue-plugin'><img src='https://www.manfredhu.com/images/hu-vue-plugin.png' height='60' alt='hu-vue-plugin Logo' /></a></h1>
 
+[![](https://img.shields.io/travis/ManfredHu/hu-vue-plugin.svg?style=flat-square)](https://travis-ci.org/ManfredHu/hu-vue-plugin.svg)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)](https://github.com/ManfredHu/hu-vue-plugin)
+[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/ManfredHu/hu-vue-plugin)
+
 这是一个比较简单上手的插件，集成一些现有的解决方案，如果有更好的模块或者解决方案，请提issue讨论
 
 # 内置工具模块
