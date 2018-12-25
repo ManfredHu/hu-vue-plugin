@@ -5,7 +5,6 @@
 # 内置工具模块
 ## this.$et
 使用 events 模块, click [here](https://github.com/Gozala/events).
-Demo
 ```js
 // listen
 this.$et.on('createBtn', (obj, number) => {
@@ -15,7 +14,7 @@ this.$et.emit('createBtn', {a: 123}, 9527))
 ```
 
 ## this.$cookie
-Using js-cookie, click [here](https://www.npmjs.com/package/js-cookie)Demo
+Using js-cookie, click [here](https://www.npmjs.com/package/js-cookie)
 ```js
 // set
 this.$cookie.set('time', new Date(), { expires: 7, path: '' })
@@ -25,14 +24,14 @@ this.$cookie.get('time')
 
 ## this.$time
 因为moment太大了在移动端，大约200K，所以用了轻量的同类语法的解决方案[dayjs](https://github.com/iamkun/dayjs).
-Demo
+
 ```js
 this.$time().format('YYYY-MM-DD HH:mm:ss') //2018-12-21 10:06:42
 ```
 
 ## this.$axios
 Using Axios, click [here](https://github.com/axios/axios)
-Demo
+
 ```js
 this.$axios.get('/static/mock/axiosTestData.json').then(({data}) => {
   console.log(data)
@@ -42,7 +41,7 @@ this.$axios.get('/static/mock/axiosTestData.json').then(({data}) => {
 ## this.$cache
 Using localforage, click [here](https://github.com/localForage/localForage).
 这里其实localforage是支持localStorage/indexeddb/websql的，这里用到了localStorage.
-Demo
+
 ```js
 const self = this
 this.$cache.setItem('time', 123).then(() => {
@@ -63,12 +62,12 @@ But the default use of Web SQL in PC, if you need localStorage, [modify the driv
 动态引用，不用到调试脚本的用户不拉取调试脚本。
 
 ### [eruda](https://github.com/liriliri/eruda)
-add url param `&debug=eruda` or `eruda=true`
-code in `src/helper/eruda-helper.js`
+增加 `&debug=eruda` 或者 `eruda=true` 的url参数.
+代码在 `src/helper/eruda-helper.js`
 
 ### [vconsole](https://github.com/Tencent/vConsole)
-add url param `&debug=vconsole` or `vconsole=true`
-code in `src/helper/vconsole-helper.js`
+增加 `&debug=vconsole` 或者 `vconsole=true`的url参数.
+代码在 `src/helper/vconsole-helper.js`
 
 ## tools工具
 ### hu-tool
@@ -77,7 +76,7 @@ hu-tool包含常用的一些工具，比如URL模块，可以获取url的query�
 
 ### v-tap
 我们知道移动端的click事件是有延迟的，所以会用`touchend`事件来做兼容。具体可以看`src/page/tapTest.vue`这个页面，对应的路由hash是`/tap`
-tap指令的代码在`directive/tap.js`。或者也可以用[fastClick](https://github.com/ftlabs/fastclick)。通过mixins引入页面，`src/mixins/baseMinxins.js`
+tap指令的代码在`directive/tap.js`。或者也可以用[fastClick](https://github.com/ftlabs/fastclick)。
 
 #### v-tap指令用法
 给template元素绑定v-tap="methodName",在PC绑定click事件，在移动端绑定touch事件（防止移动端点击穿透）
@@ -87,7 +86,7 @@ tap指令的代码在`directive/tap.js`。或者也可以用[fastClick](https://
 - 2.可以加`.move`则可以在回调`event.moveTag`收到是'left'/'rigth'/'up'/'down'/false，注意这里移动必须大于moveStandard(默认70)
 - 3.v-tap可以加在带有href跳转链接的a标签上，会自动做页面跳转如 `<a v-tap href="https://www.qq.com"></a>`
 
-## style样式[会独立一个包]
+## style样式(会独立一个包)
 ### 使用normalize.css实现样式重置
 具体可以看`src/main.js`里面，引入了normalize.css
 
