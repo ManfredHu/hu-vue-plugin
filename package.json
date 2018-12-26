@@ -12,7 +12,7 @@
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
     "build": "npm run lint && node build/build.js",
-    "commit": "npx git-cz"
+    "commit": "git-cz"
   },
   "dependencies": {
     "vue": "^2.5.2",
